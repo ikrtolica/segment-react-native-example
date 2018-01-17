@@ -1,0 +1,3 @@
+rootProject.name = 'SNC'
+
+include ':app'
