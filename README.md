@@ -9,7 +9,7 @@ Why only use native libs?  Native libs offer superior performance on mobile clie
 1. A Firebase account
 2. A Segment account + write key
 3. Cocoapods (for your native client libs)
-4. ![Segment react-native library](https://github.com/tonyxiao/react-native-analytics)
+4. [Segment react-native library](https://github.com/tonyxiao/react-native-analytics)
 
 ## Overview
 
@@ -64,7 +64,7 @@ This approach initializes the Segment Analytics singleton object in native code,
 }
 ```
 
-Configuration options are documented here in the ![Segment mobile sources for iOS](https://segment.com/docs/sources/mobile/ios/) library docs.
+Configuration options are documented here in the [Segment mobile sources for iOS](https://segment.com/docs/sources/mobile/ios/) library docs.
 
 Note the `[configuration use:[SEGFirebaseIntegrationFactory instance]];` tells Segment to add the Firebase client library to the list of sources for this client.
 
