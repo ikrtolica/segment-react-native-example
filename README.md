@@ -25,6 +25,8 @@ pod 'Segment-Firebase'
 
 After `pod install` you will have to use Xcode workspaces to build this project.  This is a Cocoapods requirement.
 
+It is possible to add additional sources (bseides Firebase) from the [Segment catalog](https://segment.com/docs/sources/).
+
 2. React Native Packages
 
 `yarn add react-native-analytics`
@@ -39,7 +41,7 @@ This library is community developed and provides a RN Native wrapper around the 
 },
 ```
 
-Make sure that your iOS app project in your workspace contains the RNSegmentIOAnalytics.m and .h files from the iOS cocoapod for react-native-analytics, otherwise you will not be able to link your project.  This is a current limitation of the community developed project.
+Make sure that your iOS app project in your workspace contains the `RNSegmentIOAnalytics.m and .h` files from the iOS directory in `./node_modules/react-native-analytics`, otherwise you will not be able to link your project.  This is a current limitation of the community developed project.
 
 3. Segment Analytics
 
@@ -70,7 +72,7 @@ Note the `[configuration use:[SEGFirebaseIntegrationFactory instance]];` tells S
 
 4. Firebase
 
-Make sure that you have your `GoogleService-Info.plist` file in the root of your app project, and the Xcode is bundling this in your app.  This is required for the Firebase client to start properly.
+Make sure that you have your `GoogleService-Info.plist` file in the root of your app project, and that Xcode is bundling this in your app.  This is required for the Firebase client to start properly.
 
 *IMPORTANT*
 
@@ -93,4 +95,4 @@ Analytics.screen("snc_home", {"screenType":"TEST APP HOME SCREEN"});
 
 Look at `App.js` for the whole package.
 
-Note that these are examples - these calls will automatically call Segment *and* Firebase.  It is possible to add additional sources from the [Segment catalog](https://segment.com/docs/sources/).
+Note that these are examples - these calls will automatically call Segment *and* Firebase, or whatever other Segment source library you have added.
