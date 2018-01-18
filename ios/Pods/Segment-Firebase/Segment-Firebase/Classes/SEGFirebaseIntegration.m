@@ -16,7 +16,7 @@
             [FIROptions defaultOptions].deepLinkURLScheme = deepLinkURLScheme;
             SEGLog(@"[FIROptions defaultOptions].deepLinkURLScheme = %@;", deepLinkURLScheme);
         }
-        
+
         [FIRApp configure];
         SEGLog(@"[FIRApp Configure]");
     }
@@ -55,7 +55,7 @@
 
      [self.firebaseClass logEventWithName:name parameters:parameters];
      SEGLog(@"[FIRAnalytics logEventWithName:%@ parameters:%@]", name, parameters);
-     
+
  }
 
 
@@ -85,9 +85,9 @@
                             kFIREventShare, @"Cart Shared",
                             kFIREventSearch, @"Products Searched", nil
                             ];
-    
+
     NSString *mappedEvent = [mapper objectForKey:event];
-    
+
     if (mappedEvent) {
         return mappedEvent;
     } else {
@@ -117,8 +117,8 @@
                         kFIRParameterValue, @"revenue",
                         kFIRParameterTransactionID, @"order_id",
                         kFIRParameterCurrency, @"currency", nil];
-    
-    
+
+
     return [SEGFirebaseIntegration mapToFirebaseParameters:properties withMap:map];
 }
 
@@ -132,7 +132,7 @@
             [mappedParams setObject:data forKey:new];
         }
     }];
-    
+
     return [formatEventProperties(mappedParams) copy];
 }
 
@@ -149,7 +149,7 @@ NSDictionary *formatEventProperties(NSDictionary *dictionary)
             [output setObject:data forKey:key];
         }
     }];
-    
+
     return [output copy];
 
 }
@@ -158,7 +158,7 @@ NSDictionary *formatEventProperties(NSDictionary *dictionary)
 + (NSDictionary *)mapToStrings:(NSDictionary *)dictionary
 {
     NSMutableDictionary *output = [NSMutableDictionary dictionaryWithCapacity:dictionary.count];
-    
+
     [dictionary enumerateKeysAndObjectsUsingBlock:^(id key, id data, BOOL *stop) {
         if ([data isKindOfClass:[NSString class]]) {
             [output setObject:data forKey:key];
@@ -166,7 +166,7 @@ NSDictionary *formatEventProperties(NSDictionary *dictionary)
             [output setObject:[NSString stringWithFormat:@"%@", data] forKey:key];
         }
     }];
-    
+
     return [output copy];
 }
 

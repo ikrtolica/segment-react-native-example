@@ -10,6 +10,7 @@
 
 + (instancetype)instance
 {
+    NSLog(@"********* SEGIntegration *************");
     static dispatch_once_t once;
     static SEGFirebaseIntegrationFactory *sharedInstance;
     dispatch_once(&once, ^{
