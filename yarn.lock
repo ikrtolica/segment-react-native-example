@@ -3535,6 +3535,10 @@ react-devtools-core@3.0.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-analytics@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-analytics/-/react-native-analytics-0.1.2.tgz#99d67357724ad0007cffdde1425ebcd031797a28"
+
 react-native@0.52.0:
   version "0.52.0"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.52.0.tgz#9784663a2aa40b30c87d4c9c06ef26cf8d419d91"
