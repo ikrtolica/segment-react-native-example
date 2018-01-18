@@ -77,3 +77,20 @@ Make sure that you have your `GoogleService-Info.plist` file in the root of your
 Make sure that Firebase is added as a source in your Segment console, and that it is enabled.  Segment analytics will ignore the Firebase client in your app if you do not do this.
 
 If you are having issues getting data to Firebase, you can enable Firebase debug mode in Xcode by adding -FIRDebugEnable to the start params for the simulator.
+
+5. React-Native calls
+
+The best part:  After the client libraries are set up, you can call them directly from react-native apps with calls like:
+
+```
+...
+import Analytics from 'react-native-analytics';
+...
+Analytics.identify("snc_user", {"name":"test name"});
+Analytics.track("snc_test_track", {"name":"test track with name"});
+Analytics.screen("snc_home", {"screenType":"TEST APP HOME SCREEN"});
+```
+
+Look at `App.js` for the whole package.
+
+Note that these are examples - these calls will automatically call Segment *and* Firebase.  It is possible to add additional sources from the [Segment catalog](https://segment.com/docs/sources/).
