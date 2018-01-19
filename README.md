@@ -25,7 +25,7 @@ pod 'Segment-Firebase'
 
 After `pod install` you will have to use Xcode workspaces to build this project.  This is a Cocoapods requirement.
 
-It is possible to add additional sources (bseides Firebase) from the [Segment catalog](https://segment.com/docs/sources/).
+It is possible to add additional sources (besides Firebase) from the [Segment catalog](https://segment.com/docs/sources/).
 
 2. React Native Packages
 
